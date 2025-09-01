@@ -1,9 +1,24 @@
 [
   {
+    "version": "1.0.0",
+    "date": "2025-08-31",
+    "notes": [
+      "Initial release of the Union Mod Manager."
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "date": "2025-08-31",
+    "notes": [
+      "Added mod.ini support to include mod version and author."
+    ]
+  },
+  {
     "version": "1.0.2",
     "date": "2025-09-01",
     "notes": [
-      "I'm testing here"
+      "Added buttons to open the containing folder for Storage and Game Mod folders in Settings.",
+      "Added a Patch Notes section in the app."
     ]
   }
 ]
