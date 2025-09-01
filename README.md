@@ -1,4 +1,4 @@
-# Sonic Racing CrossWorlds - Unreal Mod Manager (UMM)
+# Sonic Racing CrossWorlds - Union Mod Manager (UMM)
 
 A lightweight, easy-to-use mod manager for **Sonic Racing CrossWorlds**. Manage your mods, install/uninstall them easily, and launch your game all from one simple interface.
 
