@@ -1,6 +1,6 @@
 # Sonic Racing CrossWorlds - Unreal Mod Manager (UMM)
 
-A lightweight, easy-to-use mod manager for **Sonic Racing CrossWorlds**. Manage your mods, install/uninstall them easily, and launch your game—all from one simple interface.
+A lightweight, easy-to-use mod manager for **Sonic Racing CrossWorlds**. Manage your mods, install/uninstall them easily, and launch your game all from one simple interface.
 
 > ⚠ Note: The Config Editor is currently **non-functional**. Mods must have a `config.ini` manually created for metadata display.
 
