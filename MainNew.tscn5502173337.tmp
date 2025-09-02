@@ -1,0 +1,468 @@
+[gd_scene load_steps=21 format=3 uid="uid://iqva0gv24l6f"]
+
+[ext_resource type="Script" uid="uid://bxw5p51xoom0k" path="res://scripts/ModManagerNew.gd" id="1_s1pi6"]
+[ext_resource type="Texture2D" uid="uid://cppla56x6y71a" path="res://assets/newsbg-pc.webp" id="2_s2u72"]
+[ext_resource type="Script" uid="uid://b2f4psogpeg05" path="res://settings.gd" id="3_8vq8o"]
+[ext_resource type="PackedScene" uid="uid://bkh47w8qo5p00" path="res://setup_guide.tscn" id="3_s2u72"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j844c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j844c"]
+bg_color = Color(0.0352941, 0, 0.0823529, 0.247059)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2u72"]
+bg_color = Color(0.6, 0.6, 0.6, 0.133333)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_color = Color(0.103459, 0.632328, 0.187387, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vq8o"]
+bg_color = Color(0.6, 0.6, 0.6, 0.133333)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_color = Color(0.821015, 0.780307, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sas3"]
+bg_color = Color(0.6, 0.6, 0.6, 0.133333)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_color = Color(0.819608, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2u72"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gor3p"]
+bg_color = Color(0.697565, 0.534056, 7.70092e-07, 1)
+skew = Vector2(0.3, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.32549, 0.862745, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7kfp"]
+bg_color = Color(0.915091, 0.807792, 0.13258, 1)
+skew = Vector2(0.3, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bousk"]
+bg_color = Color(0.00392157, 0.564706, 1, 1)
+skew = Vector2(0.3, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuhjd"]
+bg_color = Color(0.00392157, 0.25098, 0.482353, 0.956863)
+skew = Vector2(0.3, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vq8o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lkh1"]
+bg_color = Color(1, 0.556863, 0, 1)
+skew = Vector2(-0.3, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.752941, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5wrba"]
+bg_color = Color(1, 0.815686, 0, 1)
+skew = Vector2(-0.3, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.854902, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dev5"]
+bg_color = Color(0.0196078, 0.454902, 0.929412, 1)
+skew = Vector2(-0.3, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3sas3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eo0of"]
+bg_color = Color(0.0259391, 0.216264, 0.514379, 0.952941)
+skew = Vector2(-0.3, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s1pi6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.65834, 0.65834, 0.65834, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -18.0
+offset_bottom = 17.4
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s2u72")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_j844c")
+theme_override_styles/panel = SubResource("StyleBoxFlat_j844c")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_s2u72")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_8vq8o")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_3sas3")
+current_tab = 1
+
+[node name="Mods" type="VBoxContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Mods"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Mods/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Mods"]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Mods/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="TabContainer/Mods/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bousk")
+text = "Refresh"
+
+[node name="Button3" type="Button" parent="TabContainer/Mods/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bousk")
+text = "Save & Install"
+
+[node name="Button4" type="Button" parent="TabContainer/Mods/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yuhjd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bousk")
+disabled = true
+text = "Launch Game Offline"
+
+[node name="Button5" type="Button" parent="TabContainer/Mods/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bousk")
+text = "Launch Game"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Mods/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Mods"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="TabContainer/Mods"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Settings" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+script = ExtResource("3_8vq8o")
+metadata/_tab_index = 1
+
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Settings"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Settings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Settings/HBoxContainer"]
+layout_mode = 2
+text = "Storage Path:"
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Settings/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Location Where all your mods are..."
+editable = false
+
+[node name="VSeparator7" type="VSeparator" parent="TabContainer/Settings/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator8" type="VSeparator" parent="TabContainer/Settings/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8vq8o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+text = "Browse"
+
+[node name="Button2" type="Button" parent="TabContainer/Settings/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8vq8o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+text = "Open Folder"
+
+[node name="VSeparator5" type="VSeparator" parent="TabContainer/Settings/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator6" type="VSeparator" parent="TabContainer/Settings/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="TabContainer/Settings"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Settings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Settings/HBoxContainer2"]
+layout_mode = 2
+text = "Game Mods Path:"
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Settings/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "~mods folder in paks "
+editable = false
+
+[node name="VSeparator3" type="VSeparator" parent="TabContainer/Settings/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator4" type="VSeparator" parent="TabContainer/Settings/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+text = "Browse"
+
+[node name="Button2" type="Button" parent="TabContainer/Settings/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+text = "Open Folder"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Settings/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Settings/HBoxContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="TabContainer/Settings"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="TabContainer/Settings"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Settings/HBoxContainer5"]
+layout_mode = 2
+text = "ue4ss Mods Path: "
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Settings/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "location of the ue4ss mods folder"
+editable = false
+
+[node name="VSeparator3" type="VSeparator" parent="TabContainer/Settings/HBoxContainer5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator4" type="VSeparator" parent="TabContainer/Settings/HBoxContainer5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+text = "Browse"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Settings/HBoxContainer5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Settings/HBoxContainer5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HSeparator5" type="HSeparator" parent="TabContainer/Settings"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="TabContainer/Settings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Settings/HBoxContainer4"]
+layout_mode = 2
+text = "Offline Game ExE Path:"
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Settings/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Location of SonicRacingCrossWorldsONT.exe "
+editable = false
+
+[node name="VSeparator3" type="VSeparator" parent="TabContainer/Settings/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator4" type="VSeparator" parent="TabContainer/Settings/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_eo0of")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+disabled = true
+text = "Browse"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Settings/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Settings/HBoxContainer4"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="TabContainer/Settings"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Settings"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Settings"]
+layout_mode = 2
+
+[node name="VSeparator4" type="VSeparator" parent="TabContainer/Settings/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator5" type="VSeparator" parent="TabContainer/Settings/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator6" type="VSeparator" parent="TabContainer/Settings/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+text = "Save Settings"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Settings/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator3" type="VSeparator" parent="TabContainer/Settings/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Settings/HBoxContainer3"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="TabContainer/Settings"]
+
+[node name="Window" type="Window" parent="."]
+title = "Setup Guide"
+initial_position = 1
+size = Vector2i(930, 645)
+visible = false
+unresizable = true
+
+[node name="SetupGuide" parent="Window" instance=ExtResource("3_s2u72")]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
