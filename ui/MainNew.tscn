@@ -5,17 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://bkh47w8qo5p00" path="res://ui/setup_guide.tscn" id="3_s2u72"]
 [ext_resource type="Texture2D" uid="uid://bgkaysu3lihq5" path="res://assets/support_me_on_kofi_beige.webp" id="5_3sas3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j844c"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j844c"]
 bg_color = Color(0.0352941, 0, 0.0823529, 0.247059)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2u72"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sas3"]
 bg_color = Color(0.6, 0.6, 0.6, 0.133333)
 border_width_left = 10
 border_width_top = 5
 border_width_right = 10
-border_color = Color(0.103459, 0.632328, 0.187387, 1)
+border_color = Color(0.819608, 0, 0, 1)
 border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -30,17 +28,25 @@ border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sas3"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2u72"]
 bg_color = Color(0.6, 0.6, 0.6, 0.133333)
 border_width_left = 10
 border_width_top = 5
 border_width_right = 10
-border_color = Color(0.819608, 0, 0, 1)
+border_color = Color(0.103459, 0.632328, 0.187387, 1)
 border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2u72"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j844c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bousk"]
+bg_color = Color(0.00392157, 0.564706, 1, 1)
+skew = Vector2(0.3, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7kfp"]
+bg_color = Color(0.915091, 0.807792, 0.13258, 1)
+skew = Vector2(0.3, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gor3p"]
 bg_color = Color(0.697565, 0.534056, 7.70092e-07, 1)
@@ -52,13 +58,7 @@ border_width_bottom = 5
 border_color = Color(0, 0.32549, 0.862745, 1)
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7kfp"]
-bg_color = Color(0.915091, 0.807792, 0.13258, 1)
-skew = Vector2(0.3, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bousk"]
-bg_color = Color(0.00392157, 0.564706, 1, 1)
-skew = Vector2(0.3, 0)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2u72"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuhjd"]
 bg_color = Color(0.00392157, 0.25098, 0.482353, 0.956863)
@@ -76,16 +76,14 @@ func _on_button_pressed() -> void:
 	OS.shell_open(\"https://ko-fi.com/itzcyn\")
 "
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vq8o"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lkh1"]
-bg_color = Color(1, 0.556863, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dev5"]
+bg_color = Color(0.0196078, 0.454902, 0.929412, 1)
 skew = Vector2(-0.3, 0)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1, 0.752941, 0, 1)
+border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5wrba"]
 bg_color = Color(1, 0.815686, 0, 1)
@@ -96,14 +94,16 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(1, 0.854902, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dev5"]
-bg_color = Color(0.0196078, 0.454902, 0.929412, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lkh1"]
+bg_color = Color(1, 0.556863, 0, 1)
 skew = Vector2(-0.3, 0)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
+border_color = Color(1, 0.752941, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vq8o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3sas3"]
 
@@ -151,11 +151,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_j844c")
 theme_override_styles/panel = SubResource("StyleBoxFlat_j844c")
-theme_override_styles/tab_selected = SubResource("StyleBoxFlat_s2u72")
-theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_8vq8o")
 theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_3sas3")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_8vq8o")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_s2u72")
+theme_override_styles/tab_focus = SubResource("StyleBoxEmpty_j844c")
 tab_alignment = 1
 current_tab = 0
 
@@ -183,41 +183,40 @@ size_flags_horizontal = 3
 [node name="Button2" type="Button" parent="TabContainer/Mods/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_bousk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
 text = "Refresh"
 
 [node name="Button3" type="Button" parent="TabContainer/Mods/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_bousk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
 text = "Save & Install"
 
 [node name="Button4" type="Button" parent="TabContainer/Mods/HBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_yuhjd")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_bousk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yuhjd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
 text = "Launch Game Offline"
 
 [node name="Button5" type="Button" parent="TabContainer/Mods/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_uv0u2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_bousk")
-disabled = true
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g7kfp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gor3p")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uv0u2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s2u72")
 text = "Launch Game"
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/Mods/HBoxContainer"]
@@ -267,19 +266,19 @@ layout_mode = 2
 [node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_8vq8o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8vq8o")
 text = "Browse"
 
 [node name="Button2" type="Button" parent="TabContainer/Settings/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_8vq8o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8vq8o")
 text = "Open Folder"
 
 [node name="VSeparator5" type="VSeparator" parent="TabContainer/Settings/HBoxContainer"]
@@ -318,19 +317,19 @@ layout_mode = 2
 [node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
 text = "Browse"
 
 [node name="Button2" type="Button" parent="TabContainer/Settings/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
 text = "Open Folder"
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/Settings/HBoxContainer2"]
@@ -371,10 +370,10 @@ layout_mode = 2
 [node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer5"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
 text = "Browse"
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/Settings/HBoxContainer5"]
@@ -414,11 +413,11 @@ layout_mode = 2
 [node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_eo0of")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_eo0of")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3sas3")
 text = "Browse"
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/Settings/HBoxContainer4"]
@@ -457,9 +456,9 @@ layout_mode = 2
 [node name="Button" type="Button" parent="TabContainer/Settings/HBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7dev5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5wrba")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5lkh1")
 text = "Save Settings"
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/Settings/HBoxContainer3"]
@@ -482,6 +481,7 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
 title = "Setup Guide"
 initial_position = 1
 size = Vector2i(930, 645)

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Union Mod Manager"
 run/main_scene="uid://iqva0gv24l6f"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="uid://cxkwdirhsnss0"
 

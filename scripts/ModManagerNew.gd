@@ -365,7 +365,7 @@ func _on_launch_pressed() -> void:
 		print("Launched game with -union: ", exe_file)
 
 func _on_online_launch_pressed() -> void:
-	var steam_url := "steam://launch/3601350"
+	var steam_url := "steam://launch/2486820"
 	var err := OS.shell_open(steam_url)
 	if err != OK:
 		printerr("Failed to launch Steam game: ", steam_url)
